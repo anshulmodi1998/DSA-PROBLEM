@@ -1,0 +1,17 @@
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        swap(0,n-k-1,nums);
+        swap(n-k,n-1,nums);
+        swap(0,n-1,nums);
+    }
+   public static void swap(int start,int end,int nums[]){
+       while(start<end){
+        int ans = nums[end];
+        nums[end] = nums[start];
+        nums[start] = ans;
+        start++;
+        end--;
+       }
+    }
+}
